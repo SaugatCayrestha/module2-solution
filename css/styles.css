@@ -1,0 +1,106 @@
+/* Base Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #ccc;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.section {
+    border: 1px solid black;
+    padding: 20px;
+    margin: 10px;
+    background-color: #f1f1f1;
+    position: relative;
+    overflow: hidden;
+}
+
+.section .title {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #e1e1e1;
+    padding: 5px;
+    border: 1px solid black;
+}
+
+/* Desktop Styles */
+@media (min-width: 992px) {
+    .section {
+        width: calc(33.333% - 20px); /* Adjust for margin */
+    }
+}
+
+/* Tablet Styles */
+@media (min-width: 768px) and (max-width: 991px) {
+    .section {
+        width: calc(50% - 20px); /* Adjust for margin */
+    }
+    .section:nth-child(3) {
+        width: calc(100% - 20px); /* Adjust for margin */
+    }
+}
+
+/* Mobile Styles */
+@media (max-width: 767px) {
+    .section {
+        width: calc(100% - 20px); /* Adjust for margin */
+    }
+}
+
+/* Section Background Colors */
+#section1 {
+    background-color: #ffcccc;
+}
+
+#section2 {
+    background-color: #ccffcc;
+}
+
+#section3 {
+    background-color: #ccccff;
+}
+
+/* Section Title Colors */
+#section1 .title {
+    background-color: #ff9999;
+}
+
+#section2 .title {
+    background-color: #99ff99;
+}
+
+#section3 .title {
+    background-color: #9999ff;
+}
+
+/* Font Sizes */
+header h1 {
+    font-size: 200%;
+}
+
+.section .title {
+    font-size: 125%;
+}
+
+.section p {
+    font-size: 100%;
+    padding-top: 20px; /* Pushes dummy text down to avoid overlap */
+}
